@@ -103,7 +103,7 @@ function Header() {
     <header className="header">
       <div className="container header-row">
         <Link to="/" className="brand" aria-label="Página inicial">
-          <span className="brand-logo">U</span>
+          <img src="/logo.png" alt="" className="brand-mark" />
           <span className="brand-text"><strong>UniSatc</strong><small>Marketplace</small></span>
         </Link>
         <SearchBox />
@@ -124,7 +124,7 @@ function Header() {
             </>
           ) : (
             <>
-              <Link to="/login" className="btn btn-ghost-light">Entrar</Link>
+              <Link to="/login" className="btn btn-outline">Entrar</Link>
               <Link to="/cadastro" className="btn btn-accent hide-sm">Criar conta</Link>
               <button className="icon-link show-sm" onClick={() => setMobileOpen((o) => !o)} aria-label="Menu"><Menu size={22} /></button>
             </>

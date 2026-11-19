@@ -49,11 +49,12 @@ export default function Home() {
     <>
       {!q && kind === 'todos' && (
         <section className="hero">
+          <img src="/logo.png" alt="" className="hero-watermark" aria-hidden="true" />
           <div>
             <h1>O marketplace da comunidade UniSatc</h1>
             <p>Compre, venda e doe entre alunos e professores, peça na cantina sem fila e encontre o que foi perdido no campus.</p>
             <div className="hero-actions">
-              <Link to={user ? '/anunciar' : '/cadastro'} className="btn btn-accent btn-lg"><Plus size={18} /> {user ? 'Criar anúncio' : 'Criar minha conta'}</Link>
+              <Link to={user ? '/anunciar' : '/cadastro'} className="btn btn-white btn-lg"><Plus size={18} /> {user ? 'Criar anúncio' : 'Criar minha conta'}</Link>
               <Link to="/estabelecimentos" className="btn btn-ghost-light btn-lg">Ver restaurantes e lojas</Link>
             </div>
           </div>

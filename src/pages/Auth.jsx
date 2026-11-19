@@ -11,7 +11,7 @@ function AuthCard({ title, subtitle, children }) {
   return (
     <div className="auth-wrap">
       <div className="card auth-card">
-        <div className="auth-brand"><span className="brand-logo">U</span></div>
+        <div className="auth-brand"><img src="/logo.png" alt="UniSatc" /></div>
         <h1>{title}</h1>
         {subtitle && <p className="muted">{subtitle}</p>}
         {children}
