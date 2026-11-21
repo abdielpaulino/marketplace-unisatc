@@ -66,14 +66,6 @@ export default function Home() {
         </section>
       )}
 
-      <div className="tabs" role="tablist">
-        {TABS.map((t) => (
-          <button key={t.id} role="tab" aria-selected={kind === t.id} className={kind === t.id ? 'active' : ''} onClick={() => setKind(t.id)}>
-            {t.label}
-          </button>
-        ))}
-      </div>
-
       <div className="catalog">
         <aside className={`filters card ${showFilters ? 'open' : ''}`}>
           <div className="filters-head">
