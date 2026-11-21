@@ -32,6 +32,7 @@ export async function buildSeed() {
     mkUser('u-ana', 'Ana Souza', 'ana.souza@alunosatc.edu.br', '123456', 'aluno', 'Engenharia de Software', '(48) 99999-1111', daysAgo(90)),
     mkUser('u-bruno', 'Bruno Lima', 'bruno.lima@alunosatc.edu.br', '123456', 'aluno', 'Gastronomia', '(48) 99999-2222', daysAgo(80)),
     mkUser('u-carla', 'Carla Mendes', 'carla.mendes@satc.edu.br', '123456', 'professor', 'Engenharia de Software', '(48) 99999-3333', daysAgo(200)),
+    mkUser('u-julia', 'Júlia Martins', 'julia.martins@alunosatc.edu.br', '123456', 'aluno', 'Engenharia Mecânica', '(48) 99999-5555', daysAgo(400)),
     mkUser('u-diego', 'Diego Rocha', 'diego.rocha@alunosatc.edu.br', '123456', 'aluno', 'Administração', '(48) 99999-4444', daysAgo(60)),
   ]);
 
@@ -68,15 +69,16 @@ export async function buildSeed() {
     L('l-caderno', 'u-diego', 'e-papelaria', 'venda', 'Caderno universitário 10 matérias', 'Caderno espiral capa dura com 200 folhas e divisórias.', 29.9, 'Material escolar', '📓', '#3B82F6', 15, { days: 6, location: 'Bloco C – sala 12' }),
     L('l-calc', 'u-diego', 'e-papelaria', 'venda', 'Calculadora científica 240 funções', 'Ideal para cálculo, física e estatística. Acompanha pilhas.', 79.9, 'Eletrônicos', '🧮', '#0EA5E9', 6, { days: 8, location: 'Bloco C – sala 12' }),
     L('l-jaleco', 'u-diego', 'e-papelaria', 'venda', 'Jaleco branco manga longa', 'Jaleco em gabardine, tamanhos P ao GG, com bordado opcional.', 65, 'Vestuário', '🥼', '#64748B', 10, { days: 9, location: 'Bloco C – sala 12' }),
+    L('l-jaleco-mec', 'u-julia', null, 'venda', 'Jaleco de mecânico (usado)', 'Jaleco azul-marinho de brim, tamanho M, usado nas aulas de laboratório e oficina de Engenharia Mecânica. Sem rasgos, só lavar e usar.', 45, 'Vestuário', '🥼', '#1E3A8A', 1, { days: 1, condition: 'usado', location: 'Bloco E – oficina' }),
     L('l-calculo', 'u-ana', null, 'venda', 'Livro Cálculo Volume 1', 'Livro de cálculo em ótimo estado, poucas anotações a lápis. Retirada no campus.', 80, 'Livros e apostilas', '📘', '#6366F1', 1, { days: 10, condition: 'usado', location: 'Biblioteca' }),
-    L('l-fone', 'u-ana', null, 'venda', 'Fone de ouvido bluetooth', 'Fone sem fio com estojo de carregamento, bateria dura cerca de 5 horas. Usado por 6 meses.', 120, 'Eletrônicos', '🎧', '#111827', 1, { days: 2, condition: 'usado', location: 'Bloco B' }),
+    L('l-fone', 'u-ana', null, 'venda', 'Fone de ouvido bluetooth', 'Fone sem fio com estojo de carregamento, bateria dura cerca de 5 horas. Usado por 6 meses.', 120, 'Eletrônicos', '🎧', '#111827', 1, { days: 2, condition: 'usado', location: 'Prédio 7' }),
     L('l-aula', 'u-ana', null, 'venda', 'Aula de reforço de programação (1h)', 'Aulas de lógica de programação, JavaScript e Python para calouros. Valor por hora, no campus ou online.', 40, 'Serviços', '💻', '#008D4A', 10, { days: 12, location: 'Laboratório 3 ou online' }),
     L('l-pressman', 'u-carla', null, 'venda', 'Livro Engenharia de Software', 'Livro clássico de engenharia de software, edição recente, capa dura. Excelente estado.', 90, 'Livros e apostilas', '📗', '#16A34A', 1, { days: 7, condition: 'usado', location: 'Sala dos professores' }),
     L('l-apostilas', 'u-carla', null, 'doacao', 'Apostilas de Física I (doação)', 'Apostilas de exercícios de Física I com teoria resumida. Doação para quem estiver cursando a disciplina.', 0, 'Livros e apostilas', '📚', '#F97316', 5, { days: 3, condition: 'usado', location: 'Sala dos professores' }),
     L('l-mesa', 'u-diego', null, 'venda', 'Mesa de estudos dobrável', 'Mesa de estudos em MDF, 90x45cm, dobrável. Ótima para apartamento ou república.', 150, 'Móveis e casa', '🪑', '#A16207', 1, { days: 15, condition: 'usado', location: 'Retirada no campus' }),
     L('l-resumos', 'u-diego', null, 'venda', 'Resumos de Direito Constitucional', 'Resumos digitados da disciplina, organizados por unidade, com mapas mentais.', 15, 'Livros e apostilas', '📝', '#DB2777', 20, { days: 1, location: 'Envio por e-mail' }),
-    L('l-garrafa', 'u-ana', null, 'perdido', 'Garrafa térmica azul', 'Perdi minha garrafa térmica azul de 750ml com adesivos de planetas, provavelmente no Bloco B (sala 204) na terça à noite.', 0, 'Acessórios', '🧴', '#2563EB', 0, { days: 1, location: 'Bloco B – sala 204' }),
-    L('l-carteirinha', 'u-bruno', null, 'encontrado', 'Carteira de estudante encontrada', 'Encontrei uma carteira de estudante perto da biblioteca. Para retirar, me chame no chat e informe o nome completo.', 0, 'Documentos', '🪪', '#0D9488', 0, { days: 2, location: 'Biblioteca' }),
+    L('l-garrafa', 'u-ana', null, 'perdido', 'Garrafa térmica azul', 'Perdi minha garrafa térmica azul de 750ml com adesivos de planetas, provavelmente no Prédio 7 (sala 204) na terça à noite.', 0, 'Acessórios', '🧴', '#2563EB', 0, { days: 1, location: 'Prédio 7 – sala 204' }),
+    L('l-carteirinha', 'u-bruno', null, 'encontrado', 'Carteira de estudante encontrada', 'Encontrei uma carteira de estudante perto da biblioteca. Para retirar, me chame no chat e informe o nome completo.', 0, 'Documentos', '💳', '#0D9488', 0, { days: 2, location: 'Biblioteca' }),
     L('l-chaves', 'u-carla', null, 'encontrado', 'Molho de chaves com chaveiro vermelho', 'Três chaves com chaveiro vermelho em formato de coração, encontradas no estacionamento. Deixei uma foto aqui para identificação.', 0, 'Acessórios', '🔑', '#DC2626', 0, { days: 4, location: 'Estacionamento principal' }),
   ];
 
